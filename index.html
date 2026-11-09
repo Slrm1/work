@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="UX and product design portfolio of Selorm Kalitsi — computer science, interaction design, AI, and human-centered products." />
+  <meta name="description" content="The portfolio of Selorm Kalitsi — Howard University computer science student building products, AI and NLP tools, interactive experiences, games, and research." />
   <meta name="theme-color" content="#0b0c10" />
-  <title>Selorm Kalitsi — UX & Product Design</title>
+  <title>Selorm Kalitsi — Software Engineering, AI & Product Design</title>
   <style>
     :root {
       --bg:#f4efe7;
@@ -142,6 +142,75 @@
       .footer-row{flex-direction:column}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.reveal{opacity:1;transform:none}}
+  
+  /* Expanded editorial portfolio index */
+  .portfolio-index{background:#ece8e1;padding-top:90px;padding-bottom:92px}
+  .portfolio-index .section-head h2{max-width:750px}
+  .portfolio-index .total-count{font-weight:800;color:#30323a;letter-spacing:.02em}
+  .portfolio-toolbar{display:flex;flex-direction:column;gap:14px;position:sticky;top:76px;z-index:20;border:1px solid rgba(16,17,22,.16);border-radius:20px;background:rgba(250,247,241,.97);box-shadow:0 14px 34px rgba(0,0,0,.07);padding:16px;margin:30px 0 24px;backdrop-filter:blur(14px)}
+  .portfolio-toolbar-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .portfolio-search{min-width:220px;width:min(100%,380px);flex:1;padding:12px 14px;border:1px solid rgba(16,17,22,.3);border-radius:12px;font:inherit;font-size:15px;background:#fff}
+  .filter-row{display:flex;flex-wrap:wrap;gap:7px}
+  .filter-btn{font:800 .78rem/1.1 inherit;font-family:inherit;cursor:pointer;border:1px solid rgba(16,17,22,.18);background:#fff;color:#2b2e33;border-radius:100px;padding:10px 13px;min-height:40px;transition:background .2s,color .2s}
+  .filter-btn[aria-pressed="true"]{background:#14161c;border-color:#14161c;color:#fff}
+  .filter-btn:hover{border-color:#101116}
+  .project-results{font-size:.8rem;font-weight:700;color:#55575e}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .archive-card{min-width:0;display:flex;flex-direction:column;position:relative;min-height:335px;background:#fffaf4;border:1px solid #dcd8ce;border-radius:18px;padding:24px;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}
+  .archive-card:hover{transform:translateY(-3px);box-shadow:0 16px 40px rgba(12,18,26,.12)}
+  .archive-card::before{content:'';position:absolute;inset:0 0 auto 0;height:5px;background:var(--card-accent,#b41f3a)}
+  .archive-card .card-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+  .archive-card .card-category{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--card-accent,#b41f3a)}
+  .archive-card .card-year{font-family:ui-monospace,monospace;font-size:.73rem;color:#666}
+  .archive-card h3{font-size:clamp(1.48rem,2vw,2rem);line-height:1.05;letter-spacing:-.042em;margin:26px 0 10px;overflow-wrap:anywhere}
+  .archive-card .card-desc{font-size:.89rem;line-height:1.6;color:#51525b;margin:0 0 18px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .archive-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+  .archive-tags span{font-size:.68rem;padding:5px 8px;background:#f0ece5;border-radius:6px;color:#363840;font-weight:750}
+  .archive-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px;padding-top:16px;border-top:1px solid rgba(16,17,22,.12)}
+  .archive-footer .status-pill{font-size:.71rem;font-weight:780;color:#55575e;max-width:62%;overflow-wrap:anywhere}
+  .archive-more{border:0;border-bottom:2px solid currentColor;border-radius:0;background:none;color:#122d51;font-weight:850;font-size:.81rem;cursor:pointer;white-space:nowrap;padding:5px 0}
+  .portfolio-empty{padding:34px;border:1px dashed #777;border-radius:18px;text-align:center;background:#fffaf4;color:#42444b}
+  .portfolio-note{font-size:.79rem;color:#5d6064;margin-top:20px;line-height:1.6}
+  .portfolio-dialog{border:0;border-radius:24px;width:min(93vw,640px);max-height:86vh;padding:0;box-shadow:0 35px 130px rgba(0,0,0,.38);background:#f9f6f0;color:var(--ink)}
+  .portfolio-dialog::backdrop{background:rgba(6,12,18,.75);backdrop-filter:blur(7px)}
+  .dialog-content{padding:clamp(24px,5vw,45px)}
+  .dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+  .dialog-close{width:40px;height:40px;min-width:40px;border-radius:50%;border:1px solid #b5b5b5;background:#fff;cursor:pointer;font-size:22px;line-height:1}
+  .dialog-kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.13em;font-weight:900;color:#b41f3a}
+  .dialog-title{font-size:clamp(2.2rem,6vw,3.9rem);line-height:1.02;letter-spacing:-.065em;margin:14px 0 20px;overflow-wrap:anywhere}
+  .dialog-description{font-size:1.07rem;color:#3d3e45;line-height:1.7}
+  .dialog-rule{height:1px;background:rgba(0,0,0,.13);margin:26px 0}
+  .dialog-meta{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+  .dialog-meta label{font-size:.68rem;font-weight:850;text-transform:uppercase;letter-spacing:.12em;color:#787982;display:block;margin-bottom:6px}
+  .dialog-meta p{margin:0;font-weight:700;font-size:.91rem;overflow-wrap:anywhere}
+  .dialog-links{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .dialog-links a{background:#14161c;color:#fff;padding:11px 15px;border-radius:999px;font-weight:800;font-size:.83rem}
+  .dialog-links a:hover{background:#1747e8}
+  .experience-section{background:#12151c;color:#fff}
+  .experience-section .eyebrow{color:#a5baff}
+  .experience-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:36px}
+  .experience-intro h2{font-size:clamp(2.8rem,6vw,5.5rem);line-height:.96;letter-spacing:-.06em;margin:10px 0 0;max-width:670px}
+  .experience-intro p{max-width:385px;color:#bfc2cd;font-size:.95rem}
+  .experience-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .experience-card{border:1px solid #424750;border-radius:20px;background:#191d26;padding:24px}
+  .experience-card .period{font-size:.72rem;font-weight:800;letter-spacing:.12em;color:#aeb4ff}
+  .experience-card h3{font-size:1.55rem;line-height:1.08;letter-spacing:-.04em;margin:15px 0 8px}
+  .experience-card .place{font-size:.9rem;font-weight:800;color:#e1e3e8}
+  .experience-card p{font-size:.9rem;color:#bec3cc;line-height:1.65;margin:12px 0 0}
+  .award-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:32px}
+  .award{border-top:2px solid #e8eaf0;padding:16px 4px}
+  .award .a-year{font-size:.75rem;color:#a5baff;font-weight:800;letter-spacing:.08em}
+  .award h4{font-size:1.12rem;line-height:1.28;letter-spacing:-.025em;margin:12px 0 4px}
+  .award p{margin:0;font-size:.77rem;color:#bcc0cb}
+  .about-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  .about-links a{font-weight:850;font-size:.85rem;border-bottom:2px solid #1747e8;padding-bottom:3px}
+  .resume-skill-line{margin-top:20px;color:#444751;font-size:.95rem}
+  @media(max-width:1000px){.portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:700px){.portfolio-toolbar{position:static}.portfolio-grid,.experience-list,.award-strip{grid-template-columns:1fr}.archive-card{min-height:unset}.portfolio-search{width:100%}.experience-card{padding:19px}}
+  @media(max-width:900px){.nav-links a[href="#all-projects"]{display:inline!important}}
+  @media(max-width:420px){.nav-links .nav-cta{display:none}.nav-inner{gap:12px}.nav-links{gap:8px}}
+  @media(prefers-reduced-motion:reduce){.archive-card:hover{transform:none}}
+
   </style>
 </head>
 <body>
@@ -150,7 +219,9 @@
     <div class="wrap nav-inner">
       <a class="brand" href="#top" aria-label="Selorm Kalitsi home">Selorm<span>.</span></a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#work">Featured</a>
+        <a href="#all-projects">All projects</a>
+        <a href="#experience">Experience</a>
         <a href="#case-study">Case Study</a>
         <a href="#about">About</a>
         <a class="nav-cta" href="https://github.com/Slrm1" target="_blank" rel="noreferrer">GitHub ↗</a>
@@ -162,7 +233,7 @@
     <section class="hero" id="top">
       <div class="wrap hero-grid">
         <div>
-          <div class="eyebrow">UX / Product Design + Software</div>
+          <div class="eyebrow">Software Engineering · Applied AI · Product Design</div>
           <h1>Designing tech that feels human.</h1>
           <p class="hero-sub">I’m Selorm Kalitsi, a Computer Science student at Howard University exploring the intersection of UX, interaction design, AI, and software engineering. I turn complex ideas into useful, understandable experiences.</p>
           <div class="hero-meta" aria-label="Profile details">
@@ -172,7 +243,7 @@
             <span class="chip">AI + Product</span>
           </div>
           <div class="actions">
-            <a class="btn primary" href="#work">View selected work ↓</a>
+            <a class="btn primary" href="#all-projects">Explore all projects ↓</a>
             <a class="btn" href="#about">About me</a>
           </div>
         </div>
@@ -190,7 +261,7 @@
         <div class="section-head">
           <div>
             <div class="eyebrow">Selected work</div>
-            <h2>Projects across product, HCI, and AI.</h2>
+            <h2>Selected work, from idea to interface.</h2>
           </div>
           <p>I’m interested in experiences that connect digital systems to real communities — especially education, campus life, culture, and emerging interfaces.</p>
         </div>
@@ -213,7 +284,7 @@
               <p>An African language-learning product focused on culturally aware lessons, multilingual access, pronunciation feedback, and practice beyond memorization.</p>
               <div class="project-tags"><span>Product Design</span><span>Localization</span><span>AI</span><span>Accessibility</span></div>
             </div>
-            <a class="project-link" href="https://github.com/Slrm1/chatbot-afrosenti" target="_blank" rel="noreferrer">View project repo</a>
+            <a class="project-link" href="#all-projects">Explore all projects</a>
           </article>
         </div>
 
@@ -232,12 +303,58 @@
               <div class="project-number">04 — Immersive experience</div>
               <h3>Famished</h3>
               <p>A collaborative VR horror game project built in Unity, combining environmental interaction, tension, and immersive feedback.</p>
-              <div class="project-tags"><span>Unity</span><span>VR</span><span>Interaction Design</span></div>
+              <div class="project-tags"><span>Unity</span><span>TypeScript</span><span>FastAPI</span><span>PyTorch</span><span>SQL</span><span>C</span><span>Git</span><span>VR</span><span>Interaction Design</span></div>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+
+    <section id="all-projects" class="portfolio-index" aria-labelledby="all-projects-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Full project index · 2025–2026</div>
+            <h2 id="all-projects-title">Every idea deserves a place in the story.</h2>
+          </div>
+          <p>From African-language learning and research to games, systems programming, and campus prototypes. Explore the work, including the experiments and course builds along the way.</p>
+        </div>
+        <div class="portfolio-toolbar" role="search" aria-label="Filter the project archive">
+          <div class="portfolio-toolbar-top">
+            <label for="portfolio-search" class="eyebrow" style="margin:0;color:#101116">Explore the archive</label>
+            <span id="portfolio-results" class="project-results" role="status" aria-live="polite"></span>
+          </div>
+          <input class="portfolio-search" id="portfolio-search" type="search" placeholder="Search projects, technologies, topics…" autocomplete="off" />
+          <div class="filter-row" role="group" aria-label="Project categories" id="portfolio-filters">
+            <button class="filter-btn" type="button" aria-pressed="true" data-filter="All">All projects</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="Product">Product</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="AI & NLP">AI + NLP</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="Data">Data / research</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="HCI">Human interaction</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="Creative">Games / creative</button>
+            <button class="filter-btn" type="button" aria-pressed="false" data-filter="Systems">Systems</button>
+          </div>
+        </div>
+        <div id="portfolio-grid" class="portfolio-grid" aria-label="Portfolio projects"></div>
+        <div id="portfolio-empty" class="portfolio-empty" hidden>No matching projects. Try a different search or choose “All projects.”</div>
+        <p class="portfolio-note">Projects are described according to their current maturity. Some are research explorations, some are team collaborations or coursework, and some have private repositories. I don't present exploratory results as deployed products.</p>
+      </div>
+    </section>
+    <dialog class="portfolio-dialog" id="portfolio-dialog" aria-labelledby="dialog-project-title">
+      <div class="dialog-content">
+        <div class="dialog-head"><div id="dialog-kicker" class="dialog-kicker"></div><button class="dialog-close" id="dialog-close" type="button" aria-label="Close project details">×</button></div>
+        <h2 id="dialog-project-title" class="dialog-title"></h2>
+        <p id="dialog-project-description" class="dialog-description"></p>
+        <div class="dialog-rule"></div>
+        <div class="dialog-meta">
+          <div><label>My involvement</label><p id="dialog-project-role"></p></div>
+          <div><label>Stage</label><p id="dialog-project-stage"></p></div>
+          <div style="grid-column:1/-1"><label>Tools and disciplines</label><p id="dialog-project-stack"></p></div>
+        </div>
+        <div class="dialog-links" id="dialog-project-links"></div>
+      </div>
+    </dialog>
 
     <section id="case-study" class="case reveal">
       <div class="wrap">
@@ -252,7 +369,7 @@
             <div class="case-facts">
               <div class="fact"><small>My role</small><strong>UX / UI Designer</strong></div>
               <div class="fact"><small>Project type</small><strong>HCI + Product Design</strong></div>
-              <div class="fact"><small>Current phase</small><strong>Concept + early UX definition</strong></div>
+              <div class="fact"><small>Current phase</small><strong>Interactive prototype + continued UX research</strong></div>
               <div class="fact"><small>Focus</small><strong>Collaboration + campus community</strong></div>
             </div>
           </div>
@@ -300,6 +417,27 @@
       </div>
     </section>
 
+
+    <section id="experience" class="experience-section reveal">
+      <div class="wrap">
+        <div class="experience-intro">
+          <div><div class="eyebrow">Experience + recognition</div><h2>Building across disciplines.</h2></div>
+          <p>Software engineering, applied research, product thinking, and game design are different practices. I like the space where they connect.</p>
+        </div>
+        <div class="experience-list">
+          <article class="experience-card"><span class="period">2026 · SUMMER GAMES</span><h3>Software Developer Intern</h3><div class="place">Booz Allen Hamilton</div><p>Worked in a software development environment on engineering and product challenges, bringing classroom foundations into an applied team setting.</p></article>
+          <article class="experience-card"><span class="period">2025—2026 · RESEARCH</span><h3>Multilingual NLP Research Volunteer</h3><div class="place">Howard University</div><p>Investigated African-language NLP, sentiment modeling, multilingual benchmarks and parameter-efficient fine-tuning. Emphasis on careful evaluation and language coverage.</p></article>
+          <article class="experience-card"><span class="period">2025 · COMMUNITY WORK</span><h3>Social Media &amp; Community Outreach</h3><div class="place">Visiting Angels</div><p>Created community-facing communications, campaign calendars and outreach content, learning to turn real-world needs into clear and engaging messaging.</p></article>
+          <article class="experience-card"><span class="period">2027 · EXPECTED GRADUATION</span><h3>B.S. Computer Science</h3><div class="place">Howard University</div><p>Software engineering foundations with a growing focus on product design, creative technology, applied machine learning and accessibility.</p></article>
+        </div>
+        <div class="award-strip" aria-label="Awards and achievements">
+          <div class="award"><span class="a-year">2026</span><h4>1st Place · HBCU Game Jam</h4><p>Collaborative game-development challenge</p></div>
+          <div class="award"><span class="a-year">2025</span><h4>Twist Category Winner</h4><p>HBCU Game Jam · Who’s Calling My Phone</p></div>
+          <div class="award"><span class="a-year">2025</span><h4>2nd Place · Health Track</h4><p>Bison Bytes Hackathon · Cardio-Sync</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="about reveal">
       <div class="wrap about-grid">
         <div>
@@ -313,6 +451,7 @@
           <div class="skills" aria-label="Skills">
             <span>UX Research</span><span>Interaction Design</span><span>Prototyping</span><span>Information Architecture</span><span>Accessibility</span><span>React</span><span>JavaScript</span><span>Python</span><span>AI / ML</span><span>Unity</span>
           </div>
+          <div class="about-links"><a href="https://github.com/Slrm1" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/selormkalitsi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="mailto:selormkalitsi@gmail.com">Email ↗</a></div>
         </div>
       </div>
     </section>
@@ -325,7 +464,7 @@
             <h2>Building something people should actually enjoy using?</h2>
             <p>I’m interested in UX, product design, software, and AI work where thoughtful interaction design matters as much as the underlying technology.</p>
           </div>
-          <a class="btn" href="https://github.com/Slrm1" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+          <div class="actions"><a class="btn" href="mailto:selormkalitsi@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/selormkalitsi/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
         </div>
       </div>
     </section>
@@ -339,6 +478,71 @@
   </footer>
 
   <script>
+
+    const portfolioProjects = [{"id":"afrolearn","title":"AfroLearn","category":"Product","status":"Active development","year":"2026","description":"An African-language learning platform with 33 developing courses, 13-unit lesson paths, pronunciation practice, quizzes, multilingual UI, and an evidence-aware content review pipeline. Generated or unreviewed material is not presented as verified.","stack":"Next.js · FastAPI · Python · React · Multilingual NLP","role":"Co-founder • product, engineering, language technology","links":[],"featured":true},{"id":"yard-studio","title":"The Yard Studio","category":"Product","status":"Working prototype","year":"2026","description":"A Howard-inspired creative workspace with organization studios, an editable canvas, component library, review workflow, local discussions, a campus map, and clearly labeled emergency simulations. Collaboration is currently browser-local.","stack":"React · TypeScript · TanStack Start · Leaflet · UX","role":"Product concept • full-stack UI • HCI","links":[{"label":"Try prototype","url":"https://id-preview--72abc57c-d854-4fa2-b41e-0b619d3fc9de.lovable.app"}],"featured":true},{"id":"nfl-bdb","title":"NFL Big Data Bowl — Combine to NFL","category":"Data","status":"Research in progress","year":"2026","description":"Tracking-data study testing whether wide receiver movement in Combine drills is associated with NFL out-route separation. Evaluates geometry, turn quality, tracked speeds, and out-of-sample predictive reliability without claiming a strong link when the evidence is weak.","stack":"Python · Pandas · Tracking data · Statistics · Modeling","role":"Independent sports analytics research","links":[],"featured":true},{"id":"career-launchpad","title":"Career Launchpad","category":"Data","status":"Dashboard prototype","year":"2026","description":"An interactive career intelligence dashboard focused on translating labor-market signals into clearer skill-gap and job-search decisions. Its measurement framework defines proposed KPIs, not proven impact metrics.","stack":"AWS QuickSight · Data visualization · Product analytics","role":"Dashboard and product analytics","links":[{"label":"Explore dashboard","url":"https://quick.aws.com/sn/accounts/491979258789/apps/d386f710-34e4-4da8-b05f-00d40f114ed5/public/Career-Launchpad"}],"featured":true},{"id":"wasteless","title":"WasteLess by HerdWise","category":"Product","status":"Senior project concept","year":"2026","description":"A campus dining planning concept that uses historical demand, menus, day of week, weather, holidays and campus events to estimate prep quantities and reduce food waste. Team project in development.","stack":"Python · Forecasting · Product discovery · Data","role":"Team member • demand planning concept","links":[],"featured":true},{"id":"howard-cs-guide","title":"Unofficial Howard CS Guide","category":"AI & NLP","status":"Course prototype","year":"2026","description":"A retrieval-augmented guide that searches source-attributed discussions and course reviews to answer Howard computer science questions. Includes ChromaDB semantic retrieval, metadata filters and conservative refusal thresholds.","stack":"Python · Gradio · ChromaDB · Embeddings · RAG","role":"AI engineering • source-grounded retrieval","links":[{"label":"Source code","url":"https://github.com/Slrm1/AI-class-project-1"}],"featured":true},{"id":"pathreview","title":"PathReview","category":"AI & NLP","status":"Course project","year":"2026","description":"A portfolio-feedback assistant for early-career developers, built around resume and repository ingestion, retrieval-augmented critique, agent workflows, and safety guardrails. Created in a course project setting.","stack":"FastAPI · React · Python · RAG · Agents","role":"Application development and review workflows","links":[{"label":"Repository","url":"https://github.com/Slrm1/pathreview-ai201-fa26-howard"}],"featured":false},{"id":"african-nlp","title":"Multilingual NLP Language-Family Research","category":"AI & NLP","status":"Research","year":"2025—2026","description":"Research into African-language sentiment, code-switching, and language-family-aware model training. Explores multilingual transformer comparisons, zero-shot performance, and parameter-efficient fine-tuning.","stack":"PyTorch · LoRA · AfriBERTa · XLM-R · NLP","role":"Research volunteer • Howard University","links":[],"featured":true},{"id":"take-meter","title":"TakeMeter","category":"AI & NLP","status":"Evaluation prototype","year":"2026","description":"A DistilBERT experiment classifying r/nfl comments as analysis, hot takes, or reactions. Reported evaluation documents class imbalance and a missed success threshold rather than overstating model accuracy.","stack":"DistilBERT · Python · Text classification · Evaluation","role":"Dataset labeling • fine-tuning • error analysis","links":[{"label":"Source code","url":"https://github.com/Slrm1/takemeter"}],"featured":false},{"id":"provenance-guard","title":"Provenance Guard","category":"AI & NLP","status":"API prototype","year":"2026","description":"A cautious authorship-signal API combining local heuristics and optional LLM analysis, with SQLite audit trails, rate limits and creator appeals. Explicitly avoids claiming it can prove text authorship.","stack":"Flask · Python · SQLite · Tests · Groq","role":"API design • guardrails • testing","links":[{"label":"Source code","url":"https://github.com/Slrm1/provenace-guard"}],"featured":false},{"id":"fitfindr","title":"FitFindr","category":"AI & NLP","status":"Course project","year":"2026","description":"A multi-tool secondhand-fashion agent that searches mock thrift listings, offers outfit combinations, and drafts a shareable fit caption. Includes conditional retries when constraints fail.","stack":"Python · Gradio · Groq · Agent planning","role":"AI tools • state management • fallback design","links":[{"label":"Source code","url":"https://github.com/Slrm1/project-2"}],"featured":false},{"id":"finlearn","title":"FinLearnAI","category":"Product","status":"Prototype concept","year":"2025","description":"A personal-finance education experience exploring how conversational AI can explain budgeting and money decisions to younger learners without burying them in financial jargon.","stack":"AI · Conversation design · Financial literacy","role":"Product concept • educational UX","links":[],"featured":false},{"id":"settlement-scout","title":"Settlement Scout / SFM","category":"Product","status":"Private prototype","year":"2025","description":"An assistant concept for navigating class-action settlement information, organizing eligibility questions, and making complicated legal processes more understandable.","stack":"Python · Retrieval · Workflow design","role":"Research prototype • information UX","links":[],"featured":false},{"id":"cardio-sync","title":"Cardio-Sync","category":"HCI","status":"Hackathon award","year":"2025","description":"A health and emergency-response concept developed for Bison Bytes. The team earned second place in the hackathon's Health track.","stack":"Healthcare UX · Prototyping · Teamwork","role":"Hackathon team member","links":[],"featured":true},{"id":"sphero","title":"Sphero Emergency Interface","category":"HCI","status":"Interaction concept","year":"2026","description":"A multimodal emergency-preparedness research interface exploring how a moving robot, lights, sounds and mobile instructions could guide people in practice scenarios. Not a deployed safety system.","stack":"HCI · Multimodal design · Accessibility","role":"Interaction research • student prototype","links":[],"featured":false},{"id":"robot-evac","title":"Howard Emergency Robot Mobile App","category":"HCI","status":"MVP / simulation","year":"2026","description":"A campus emergency research concept connecting alerts, accessibility preferences, safe-status practice and robot-assisted scenario simulations. The map and robot actions are educational demonstrations, not live guidance.","stack":"React · Maps · UI design · Safety-focused UX","role":"Campus safety HCI concept","links":[],"featured":false},{"id":"auramed","title":"Auramed","category":"HCI","status":"Healthcare concept","year":"2025","description":"A healthcare intake and patient-experience design concept exploring clearer information collection and supportive interfaces.","stack":"Healthcare UX · Prototyping · Service design","role":"Concept design","links":[],"featured":false},{"id":"who-calling","title":"Who's Calling My Phone","category":"Creative","status":"Hackathon winner","year":"2025","description":"A Unity game created during the HBCU Game Jam. The project won the Twist category and received a Unity Student Excellence Digital Laurel.","stack":"Unity · C# · Game design","role":"Game jam team • interaction design","links":[],"featured":false},{"id":"gamejam26","title":"HBCU Game Jam 2026 Project","category":"Creative","status":"First-place team","year":"2026","description":"A collaborative game project developed for the 2026 HBCU Game Jam. The team placed first. Title and gameplay details are not published here until confirmed.","stack":"Unity · Game design · Collaboration","role":"Award-winning game jam team","links":[],"featured":false},{"id":"famished","title":"Famished","category":"Creative","status":"VR prototype","year":"2025","description":"A collaborative VR horror experience using environmental interaction, atmosphere, and player feedback to build tension.","stack":"Unity · VR · Interactive storytelling","role":"Game design • immersive interaction","links":[],"featured":false},{"id":"invincible","title":"Invincible","category":"Creative","status":"Game prototype","year":"2025","description":"A Unity game-design project combining gameplay concepts with responsive interactions and iterative prototyping.","stack":"Unity · C# · Game systems","role":"Game development","links":[],"featured":false},{"id":"quantum-climate","title":"Environmental Quantum Prediction","category":"Data","status":"Research exploration","year":"2025","description":"An exploration of environmental prediction concepts using quantum-computing tools and augmented-reality presentation ideas.","stack":"Qiskit · Python · Quantum computing","role":"Exploratory research concept","links":[],"featured":false},{"id":"baltimore-ems","title":"Baltimore EMS Service Explorer","category":"Product","status":"Web prototype","year":"2025","description":"A site concept for filtering and organizing emergency-service information so residents can locate relevant resources more clearly.","stack":"HTML · CSS · JavaScript · UX","role":"Frontend development","links":[],"featured":false},{"id":"cinelog","title":"CineLog — Watchlist Review","category":"Systems","status":"Course exercise","year":"2026","description":"A Flask/SQLite film-tracking application used for a simulated code-review workflow, addressing review comments and extending watchlist functionality.","stack":"Flask · SQLite · Python · Testing","role":"Code review • backend workflow","links":[{"label":"Course repository","url":"https://github.com/Slrm1/ai201-project6-cinelog-starter"}],"featured":false},{"id":"os-synchronization","title":"Process & Thread Synchronization","category":"Systems","status":"Course project","year":"2026","description":"Concurrency exercises using POSIX semaphores, shared memory and pthread condition variables, including a bounded producer–consumer simulation.","stack":"C · POSIX · Semaphores · Pthreads","role":"Operating systems implementation","links":[{"label":"Source code","url":"https://github.com/Slrm1/operating-systems-project-2-synchronization"}],"featured":false},{"id":"quash-shell","title":"Quash — Unix-like Shell","category":"Systems","status":"Course project","year":"2026","description":"A command-line shell exercise built around process creation, execution, pipelines, signals and basic job control. Source is kept private.","stack":"C · fork/exec · Pipes · Unix","role":"Systems programming","links":[],"featured":false},{"id":"tcp-sockets","title":"TCP Socket Networking Lab","category":"Systems","status":"Course lab","year":"2026","description":"A C networking lab focused on client/server socket communication and reliable message handling.","stack":"C · TCP/IP · Network sockets","role":"Networking coursework","links":[{"label":"Source code","url":"https://github.com/Slrm1/operating-systems-lab-4-tcp-sockets"}],"featured":false},{"id":"shared-memory","title":"Shared Memory Communication","category":"Systems","status":"Course lab","year":"2026","description":"An operating-systems lab exploring interprocess communication and data sharing between processes.","stack":"C · IPC · Shared memory","role":"Systems coursework","links":[{"label":"Source code","url":"https://github.com/Slrm1/operating-systems-lab-3-part-2-shared-memory"}],"featured":false},{"id":"scheduling-sim","title":"CPU Scheduling Simulator","category":"Systems","status":"Course lab","year":"2026","description":"A scheduling simulation built as part of operating systems coursework, exploring how policies affect process execution.","stack":"C · Scheduling · Algorithms","role":"Systems coursework","links":[{"label":"Source code","url":"https://github.com/Slrm1/operating-systems-lab-6-scheduling-simulator"}],"featured":false},{"id":"weather-guesser","title":"Weather Guesser","category":"Creative","status":"Repository experiment","year":"2026","description":"A weather-themed software experiment in a public code repository. Further implementation details are not documented in its README.","stack":"Web development · Experimentation","role":"Personal coding project","links":[{"label":"Repository","url":"https://github.com/Slrm1/weather-guesser"}],"featured":false},{"id":"job-finder","title":"Job Finder","category":"Product","status":"Repository experiment","year":"2026","description":"An exploratory repository for a job-finding software idea. Public documentation is currently minimal.","stack":"Software exploration","role":"Exploratory project","links":[{"label":"Repository","url":"https://github.com/Slrm1/Job-finder"}],"featured":false},{"id":"guardian","title":"Guardian","category":"Systems","status":"Repository experiment","year":"2026","description":"A coding experiment published in the Guardian repository; its public README currently contains little implementation detail.","stack":"Software development","role":"Exploratory project","links":[{"label":"Repository","url":"https://github.com/Slrm1/Guardian"}],"featured":false},{"id":"senior-workflow","title":"Senior Project Development Workflow","category":"Systems","status":"Course exercise","year":"2026","description":"A Git-centered senior project practice repository covering branch, commit, push, pull request, review and merge workflows.","stack":"Git · Collaboration · Engineering workflow","role":"Development workflow practice","links":[{"label":"Repository","url":"https://github.com/Slrm1/intro-senior-project"}],"featured":false}];
+    const projectColors = {"Product":"#1747e8","AI & NLP":"#7630a5","Data":"#146e73","HCI":"#aa203a","Creative":"#9a572a","Systems":"#3b5261"};
+    const archiveGrid = document.getElementById("portfolio-grid");
+    const archiveSearch = document.getElementById("portfolio-search");
+    const archiveFilters = document.getElementById("portfolio-filters");
+    const resultCount = document.getElementById("portfolio-results");
+    const archiveEmpty = document.getElementById("portfolio-empty");
+    const portfolioDialog = document.getElementById("portfolio-dialog");
+    let activeArchiveFilter = "All";
+    const createEl = (tag, cls, value) => {const e=document.createElement(tag);if(cls)e.className=cls;if(value!==undefined)e.textContent=value;return e;};
+    function displayProjectDetails(project){
+      if(!project)return;
+      document.getElementById("dialog-kicker").textContent=project.category+" / "+project.year;
+      document.getElementById("dialog-project-title").textContent=project.title;
+      document.getElementById("dialog-project-description").textContent=project.description;
+      document.getElementById("dialog-project-role").textContent=project.role;
+      document.getElementById("dialog-project-stage").textContent=project.status;
+      document.getElementById("dialog-project-stack").textContent=project.stack;
+      const links=document.getElementById("dialog-project-links");
+      links.replaceChildren();
+      if(project.links.length){
+        project.links.forEach(link=>{const a=createEl("a",null,link.label+" ↗");a.href=link.url;a.target="_blank";a.rel="noopener noreferrer";links.append(a);});
+      }else{links.append(createEl("span","portfolio-note","Private source, research-only, or no public demo link available."));}
+      portfolioDialog.showModal();
+    }
+    function displayProjectIndex(){
+      const query=archiveSearch.value.trim().toLowerCase();
+      const filtered=portfolioProjects.filter(p=>(activeArchiveFilter==="All"||p.category===activeArchiveFilter) &&
+        (!query||[p.title,p.description,p.stack,p.category,p.status,p.role].join(" ").toLowerCase().includes(query)));
+      const frag=document.createDocumentFragment();
+      filtered.forEach((project,i)=>{
+        const card=createEl("article","archive-card");
+        card.style.setProperty("--card-accent",projectColors[project.category]||"#1747e8");
+        const top=createEl("div","card-top");
+        top.append(createEl("span","card-category",project.category),createEl("span","card-year",project.year));
+        const title=createEl("h3",null,project.title);
+        const desc=createEl("p","card-desc",project.description);
+        const tags=createEl("div","archive-tags");
+        project.stack.split(" · ").slice(0,4).forEach(t=>tags.append(createEl("span",null,t)));
+        const bottom=createEl("div","archive-footer");
+        bottom.append(createEl("span","status-pill",project.status));
+        const more=createEl("button","archive-more","View project ↗");
+        more.type="button";more.setAttribute("aria-label","View details about "+project.title);
+        more.addEventListener("click",()=>displayProjectDetails(project));
+        bottom.append(more);
+        card.append(top,title,desc,tags,bottom);
+        frag.append(card);
+      });
+      archiveGrid.replaceChildren(frag);
+      resultCount.textContent=filtered.length+" of "+portfolioProjects.length+" projects";
+      archiveEmpty.hidden=filtered.length!==0;
+    }
+    archiveSearch.addEventListener("input",displayProjectIndex);
+    archiveFilters.addEventListener("click",event=>{
+      const button=event.target.closest("button[data-filter]");
+      if(!button)return;
+      activeArchiveFilter=button.dataset.filter;
+      archiveFilters.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+      displayProjectIndex();
+    });
+    document.getElementById("dialog-close").addEventListener("click",()=>portfolioDialog.close());
+    portfolioDialog.addEventListener("click",event=>{if(event.target===portfolioDialog)portfolioDialog.close();});
+    displayProjectIndex();
+
     const reveal = () => {
       const items = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver(entries => {
