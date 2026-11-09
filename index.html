@@ -531,7 +531,12 @@
       resultCount.textContent=filtered.length+" of "+portfolioProjects.length+" projects";
       archiveEmpty.hidden=filtered.length!==0;
     }
-    archiveSearch.addEventListener("input",displayProjectIndex);
+    archiveSearch.addEventListener("input",()=>{
+      // Search always begins across the whole archive; category selection refines afterward.
+      activeArchiveFilter="All";
+      archiveFilters.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.filter==="All")));
+      displayProjectIndex();
+    });
     archiveFilters.addEventListener("click",event=>{
       const button=event.target.closest("button[data-filter]");
       if(!button)return;
